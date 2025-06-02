@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citations d'Olympe de Gouges</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .tabs-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background: #34495e;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            background: #34495e;
+            color: white;
+            border: none;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tab:hover {
+            background: #2c3e50;
+        }
+
+        .tab.active {
+            background: #e74c3c;
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .citation-block {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            border-radius: 0 10px 10px 0;
+            transition: transform 0.3s ease;
+        }
+
+        .citation-block:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .citation {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .citation::before {
+            content: '"';
+            font-size: 4em;
+            color: #e74c3c;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            opacity: 0.3;
+        }
+
+        .source {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .explanation {
+            color: #555;
+            line-height: 1.7;
+            padding-left: 20px;
+            border-left: 3px solid #ecf0f1;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .tab {
+                font-size: 12px;
+                padding: 10px 15px;
+            }
+            
+            .tab-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Citations d'Olympe de Gouges</h1>
+            <p>Une exploration des idées révolutionnaires sur les droits des femmes</p>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('condition-femme')">Condition de la Femme</button>
+                <button class="tab" onclick="showTab('droits-egalite')">Droits & Égalité</button>
+                <button class="tab" onclick="showTab('engagement-humaniste')">Engagement Humaniste</button>
+                <button class="tab" onclick="showTab('femme-revolutionnaire')">Femme Révolutionnaire</button>
+                <button class="tab" onclick="showTab('combat-femmes')">Appel au Combat</button>
+                <button class="tab" onclick="showTab('critique-revolutionnaires')">Critique des Révolutionnaires</button>
+                <button class="tab" onclick="showTab('conscience-politique')">Conscience Politique</button>
+                <button class="tab" onclick="showTab('wollstonecraft')">Mary Wollstonecraft</button>
+            </div>
+
+            <div id="condition-femme" class="tab-content active">
+                <h2 class="section-title">Citations sur la condition de la femme</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Adresse aux hommes (Les Droits de la Femme)</div>
+                    <div class="citation">« L'homme seul s'est fagoté un principe de cette exception. [...] il veut commander en despote sur un sexe qui a reçu toutes les facultés intellectuelles »</div>
+                    <div class="explanation">Olympe de Gouges dresse un tableau pathétique en présentant la femme comme une victime de l'oppression des hommes.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Postambule</div>
+                    <div class="citation">« Quels sont les avantages que vous avez recueillis dans la Révolution ? Un mépris plus marqué, un dédain plus signalé. »</div>
+                    <div class="explanation">Olympe de Gouges montre que la femme est victime du mépris des hommes et qu'elles n'ont obtenu de la Révolution que plus de mépris. Elle ne critique pas la Révolution, mais plutôt le comportement des hommes.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Critique de l'Ancien Régime</div>
+                    <div class="citation">« Dans des siècles de corruption, vous n'avez régné que sur la faiblesse des hommes. »</div>
+                    <div class="explanation">Olympe de Gouges critique les femmes de l'Ancien Régime, considérées comme moralement mauvaises, montrant que leurs capacités se limitaient à séduire et à manipuler.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Ancien Régime</div>
+                    <div class="citation">« Une femme n'avait besoin que d'être belle ou aimable ; quand elle possédait ces deux avantages, elle voyait cent fortunes à ses pieds. »</div>
+                    <div class="explanation">Elle donne une image néfaste de la femme sous l'Ancien Régime, contrainte à profiter de son charme pour survivre faute de lois pour les protéger.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Évolution post-révolutionnaire</div>
+                    <div class="citation">« Ce sexe autrefois méprisable et respecté, et depuis la Révolution, respectable et méprisé »</div>
+                    <div class="explanation">À la suite de la Révolution, les femmes sont devenues moralement correctes (≠ Ancien Régime), mais les hommes les méprisent encore plus.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Mariage et propriété</div>
+                    <div class="citation">« La femme mariée peut impunément donner des bâtards à son mari, et la fortune ne leur appartient pas. »</div>
+                    <div class="explanation">Olympe de Gouges dénonce les sacrifices que fait la femme en se mariant : elle se retrouve souvent avec un homme qui garde toute la fortune pour lui, malgré le fait qu'ils aient ensemble des enfants.</div>
+                </div>
+            </div>
+
+            <div id="droits-egalite" class="tab-content">
+                <h2 class="section-title">Défendre les droits des femmes et l'égalité des sexes</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Adresse aux hommes (Les Droits de la Femme)</div>
+                    <div class="citation">« Cherche, fouille et distingue [...], les sexes dans l'administration de la nature. Partout tu les trouveras confondus, partout ils coopèrent avec un ensemble harmonieux à ce chef-d'œuvre immortel. »</div>
+                    <div class="explanation">Olympe de Gouges prend l'argument des droits naturels, et veut montrer que seul l'être humain réalise des distinctions entre les sexes, ce qui est inexistant chez les animaux, les végétaux, etc.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Rhétorique de la justice</div>
+                    <div class="citation">« Homme, es-tu capable d'être juste ? C'est une femme qui t'en fait la question ; tu ne lui ôteras pas du moins ce droit. Dis-moi ? Qui t'a donné le souverain empire d'opprimer mon sexe ? Ta force ? Tes talents ? »</div>
+                    <div class="explanation">Olympe de Gouges dénonce la domination de l'homme sur la femme, mais surtout avec la rhétorique elle montre la nullité de leur autorité.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Article 1</div>
+                    <div class="citation">« La femme naît libre et demeure égale à l'homme en droits. Les distinctions sociales ne peuvent être fondées que sur l'utilité commune. »</div>
+                    <div class="explanation">La DDFC = plaidoyer pour le droit des femmes</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Article 16</div>
+                    <div class="citation">« La Constitution est nulle, si la majorité des individus qui compose la nation, n'a pas coopéré à sa rédaction. »</div>
+                    <div class="explanation">Critique radicale de la Constitution de 1789 : n'a pas de légitimité puisque les femmes n'ont pas participé à son élaboration. Olympe de Gouges appelle donc à une révolution suite à la Révolution, pour établir les droits des femmes.</div>
+                </div>
+
+                <h3 style="color: #e74c3c; margin: 30px 0 20px 0;">Droits juridiques réclamés :</h3>
+
+                <div class="citation-block">
+                    <div class="source">Article 6 - Égalité devant la loi</div>
+                    <div class="citation">« La Loi doit être l'expression de la volonté générale [...] : toutes les Citoyennes et tous les Citoyens, étant égaux à ses yeux. »</div>
+                    <div class="explanation">L'égalité devant la loi universelle</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Article 14 - Égalité économique</div>
+                    <div class="citation">« Les Citoyennes ne peuvent y adhérer que par l'admission d'un partage égal, non seulement dans la fortune, mais encore dans l'administration publique, [...]. »</div>
+                    <div class="explanation">L'égalité dans le partage de la fortune et dans la contribution à l'impôt.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Article 6 - Accès aux emplois</div>
+                    <div class="citation">« doivent être également admissibles à toutes dignités, places et emplois publics, selon leurs capacités, et sans autres distinctions que celles de leurs vertus et de leurs talents »</div>
+                    <div class="explanation">Le droit d'accéder à tous les emplois, en particulier dans l'administration publique.</div>
+                </div>
+
+                <h3 style="color: #e74c3c; margin: 30px 0 20px 0;">Droits politiques :</h3>
+
+                <div class="citation-block">
+                    <div class="source">Article 10</div>
+                    <div class="citation">« la femme a le droit de monter à l'échafaud ; elle doit avoir également celui de monter à la tribune »</div>
+                    <div class="explanation">La liberté d'expression et la participation à l'élaboration des lois : cette citation montre l'absurdité de se faire juger par des lois que les femmes n'ont pas élaborées.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Préambule</div>
+                    <div class="citation">« Les mères, les filles, les sœurs, représentantes de la nation, demandent d'être constituée en Assemblée nationale »</div>
+                    <div class="explanation">Cela englobe toutes les femmes, pour montrer qu'elles demandent leurs droits.</div>
+                </div>
+
+                <h3 style="color: #e74c3c; margin: 30px 0 20px 0;">Droits fondamentaux :</h3>
+
+                <div class="citation-block">
+                    <div class="source">Article 2</div>
+                    <div class="citation">« Le but de toute association politique est la conservation des droits naturels et imprescriptibles de la Femme et de l'Homme : ces droits sont la liberté, la propriété, la sûreté et surtout la résistance à l'oppression. »</div>
+                    <div class="explanation">Olympe de Gouges expose les droits fondamentaux de la femme qui ont été oubliés dans la DDHC.</div>
+                </div>
+            </div>
+
+            <div id="engagement-humaniste" class="tab-content">
+                <h2 class="section-title">Un texte engagé et humaniste</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Postambule - Critique de l'esclavage</div>
+                    <div class="citation">« Tout autre chemin à la fortune est fermé à la femme que l'homme achète comme l'esclave sur les côtes d'Afrique. »</div>
+                    <div class="explanation">Olympe de Gouges réalise un réquisitoire contre l'esclavage, montrant son engagement pour l'abolition de cette pratique.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Forme du contrat social de l'homme et de la femme</div>
+                    <div class="citation">« Les côlons prétendent régner en despotes sur des hommes dont ils sont les pères et les frères »</div>
+                    <div class="explanation">Dénonciation du despotisme colonial et de l'esclavage.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Postambule - Condition des esclaves</div>
+                    <div class="citation">« L'esclave commande au maître ; mais si le maître lui donne la liberté sans récompense, et à un âge où l'esclave a perdu tous ses charmes, que devient cette infortunée ? »</div>
+                    <div class="explanation">Olympe de Gouges cherche à dénoncer la misère et les inégalités sociales.</div>
+                </div>
+
+                <h3 style="color: #e74c3c; margin: 30px 0 20px 0;">Avancées sociales progressistes :</h3>
+
+                <div class="citation-block">
+                    <div class="source">Forme du contrat social - Éducation</div>
+                    <div class="citation">« Je voudrais que les filles fussent placées dans des quartiers »</div>
+                    <div class="explanation">Proposition d'avancées sociales pour l'éducation des filles.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Protection des femmes vulnérables</div>
+                    <div class="citation">« Je voudrais encore une loi qui avantageât les veuves et les demoiselles trompées par les fausses promesses »</div>
+                    <div class="explanation">Revendication de protection juridique pour les femmes en situation de vulnérabilité.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Partage équitable</div>
+                    <div class="citation">« Nous nous obligeons également en cas de séparation de faire le partage de notre fortune et de prélever la portion de nos enfants »</div>
+                    <div class="explanation">Proposition de réforme du mariage pour un partage équitable des biens.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Droits des enfants</div>
+                    <div class="citation">« notre bien appartient directement à nos enfants, de quelque lit qu'ils sortent, et que tous indistinctement ont le droit de porter le nom des pères et mères qui les ont avoués »</div>
+                    <div class="explanation">Revendication de droits pour les enfants, y compris ceux nés hors mariage.</div>
+                </div>
+            </div>
+
+            <div id="femme-revolutionnaire" class="tab-content">
+                <h2 class="section-title">Femme révolutionnaire par la réécriture de la DDHC</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Article 11 - Liberté d'expression maternelle</div>
+                    <div class="citation">« Toute citoyenne peut donc dire librement, je suis mère d'un enfant qui vous appartient, sans qu'un préjugé barbare la force à dissimuler la vérité »</div>
+                    <div class="explanation">Olympe de Gouges ajoute des notions ou modifie le sens des articles de la DDHC dans la DDFC : les femmes doivent pouvoir dévoiler l'identité du père de leurs enfants.</div>
+                </div>
+            </div>
+
+            <div id="combat-femmes" class="tab-content">
+                <h2 class="section-title">Fédérer les femmes / Appel au combat</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Dédicace à la Reine</div>
+                    <div class="citation">« Soutenez, Madame, une si belle cause ; défendez ce sexe malheureux, et vous aurez bientôt pour vous une moitié du Royaume, et le tiers au moins de l'autre. »</div>
+                    <div class="explanation">Olympe de Gouges sollicite l'aide de la Reine Marie-Antoinette, afin qu'elle puisse utiliser son statut pour venir en aide aux femmes. Elle lui fait la promesse d'une prospérité et de reconnaissance si elle donne son soutien.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Appel au réveil</div>
+                    <div class="citation">« Femme, réveille-toi ; le tocsin de la raison se fait entendre dans tout l'univers ; reconnais tes droits »</div>
+                    <div class="explanation">Appel direct et puissant aux femmes pour qu'elles prennent conscience de leurs droits.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Postambule - Pouvoir d'action</div>
+                    <div class="citation">« Quelles que soient les barrières que l'on vous oppose, il est en votre pouvoir de les affranchir ; vous n'avez qu'à le vouloir. »</div>
+                    <div class="explanation">Incite les femmes à se battre pour leurs droits oubliés, soulignant leur capacité d'action.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Interpellation directe</div>
+                    <div class="citation">« Ô femmes ! Femmes, quand cesserez-vous d'être aveugles ? Quels sont les avantages que vous avez recueillis dans la révolution ? Un mépris plus marqué, un dédain plus signalé. »</div>
+                    <div class="explanation">Question rhétorique puissante pour réveiller la conscience des femmes sur leur situation.</div>
+                </div>
+            </div>
+
+            <div id="critique-revolutionnaires" class="tab-content">
+                <h2 class="section-title">Critique des acteurs révolutionnaires (Testament politique)</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Dernières paroles</div>
+                    <div class="citation">« Français, voici mes dernières paroles, écoutez-moi dans cet écrit, et descendez dans les fonds de votre cœur : y reconnaissez-vous les vertus sévères et le désintéressement des républicains ? »</div>
+                    <div class="explanation">Par ces "dernières paroles", Olympe de Gouges dresse un réquisitoire contre ceux qui, selon elle, ont dévoyé la Révolution. Elle les confronte à leurs propres manquements et à la fausseté de leurs engagements.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Défi moral</div>
+                    <div class="citation">« Répondez : qui de vous ou de moi chérit et sert le mieux la patrie ? »</div>
+                    <div class="explanation">Illustre la posture d'Olympe de Gouges qui, face à ses accusateurs et à la mort, revendique une supériorité morale et un patriotisme plus sincère.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Accusation d'hypocrisie</div>
+                    <div class="citation">« Vous êtes presque tous de mauvaise foi. Vous ne voulez ni la liberté ni la parfaite égalité. »</div>
+                    <div class="explanation">Cette affirmation est centrale pour démontrer la dénonciation par Olympe de Gouges de l'hypocrisie ambiante. Les grands principes révolutionnaires sont trahis par ceux-là mêmes qui prétendent les défendre.</div>
+                </div>
+
+                <div class="citation-block">
+                    <div class="source">Métaphore de l'ambition</div>
+                    <div class="citation">« L'ambition vous dévore ; et ce vautour vous ronge et vous déchire sans relâche, vous porte au comble de tous les excès. »</div>
+                    <div class="explanation">Cette métaphore puissante identifie l'ambition personnelle comme une force destructrice minant la Révolution de l'intérieur et causant les dérives révolutionnaires (notamment la Terreur).</div>
+                </div>
+            </div>
+
+            <div id="conscience-politique" class="tab-content">
+                <h2 class="section-title">Affirmation d'une conscience politique intransigeante</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Testament politique</div>
+                    <div class="citation">« Français, voici mes dernières paroles, écoutez-moi dans cet écrit... »</div>
+                    <div class="explanation">La citation, présentée explicitement comme ses "dernières paroles", confère au propos une gravité et une portée testamentaire. Elle souligne le caractère définitif et solennel de sa déclaration et montre Olympe de Gouges comme une figure qui, même face à la mort, cherche à laisser un message fort pour la postérité. Son appel à <span class="highlight">"descendre dans les fonds de votre cœur"</span> est une dernière tentative de provoquer une prise de conscience.</div>
+                </div>
+            </div>
+
+            <div id="wollstonecraft" class="tab-content">
+                <h2 class="section-title">Mary Wollstonecraft</h2>
+                
+                <div class="citation-block">
+                    <div class="source">Mary Wollstonecraft</div>
+                    <div class="citation">« Je ne souhaite pas que les femmes aient du pouvoir sur les hommes, mais sur elles-mêmes. »</div>
+                    <div class="explanation">Essence de la pensée féministe de Mary Wollstonecraft : l'autonomie des femmes par l'éducation et la raison. Elle souhaite abolir la domination d'un sexe sur l'autre, ici forcément celui masculin sur le féminin.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Add smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const citationBlocks = document.querySelectorAll('.citation-block');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            citationBlocks.forEach(block => {
+                block.style.opacity = '0';
+                block.style.transform = 'translateY(20px)';
+                block.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(block);
+            });
+        });
+    </script>
+</body>
+</html>
